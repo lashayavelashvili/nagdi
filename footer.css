@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Social media styles */
+.social-media {
+    position: absolute;
+    right: 35px; /* Moved to the right side */
+    bottom: 15px; /* Lowered distance from the bottom */
+}
+
+.social-media a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #999; /* Dark gray color */
+    font-size: 20px; /* Slightly reduced font size */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.social-media a:hover {
+    color: #777; /* Darker color on hover */
+}
+
+/* Footer styles */
+footer {
+    background-color: #222; /* Darker background */
+    color: #aaa; /* Light gray text color */
+    padding: 60px 0; /* Increased padding for larger size */
+    position: relative;
+    margin-top: -1px; /* Make footer touch the navigation bar */
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between; /* Space between links and logo */
+    align-items: center;
+    border-top: 1px solid #333; /* Darker border */
+    border-bottom: 1px solid #333; /* Darker border */
+    background-color: #333; /* Even darker shade of black */
+    padding: 20px 30px; /* Adjusted padding */
+}
+
+.footer-nav .img {
+    padding: 0;
+}
+
+.footer-nav a {
+    color: #aaa; /* Light gray text color */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px; /* Slightly reduced font size */
+    position: relative;
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.footer-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    right: 0;
+    bottom: -5px;
+    background: #aaa; /* Light gray underline color */
+    transition: width 0.3s ease-out, left 0.3s ease-out; /* Smooth width and left transition */
+}
+
+.footer-nav a:hover {
+    color: #ccc; /* Slightly lighter gray color on hover */
+}
+
+.footer-nav a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #ccc; /* Lighter gray underline color on hover */
+}
+
+.footer-nav .icon {
+    display: none; /* Initially hidden */
+}
+
+@media screen and (max-width: 600px) {
+    .footer-nav a:not(.img,.icon) {
+        display: none; /* Hide all links except for the logo and icon */
+    }
+    
+    .footer-nav .icon {
+        display: block; /* Show the icon */
+    }
+
+    .footer-nav {
+        justify-content: space-between; /* Align links and icon to opposite sides */
+        padding: 20px 20px; /* Adjusted padding for small screens */
+    }
+}

@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #121212, #1f2833); /* Dark gradient background */
+  padding: 10px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-top: 15px solid #0b0c0c;
+  border-bottom: 15px solid #0b0c0c;
+}
+
+.topnav .img {
+  display: flex;                  /* Flex container for alignment */
+  align-items: center;            /* Center the image vertically */
+  padding: 0 10px;                /* Reduce padding for closer spacing */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.topnav a {
+  display: block;
+  color: #5c6770;                 /* Light gray text color */
+  text-align: center;
+  padding: 10px 14px;             /* Adjust padding for spacing */
+  text-decoration: none;
+  font-size: 18px;                /* Slightly larger font size */
+  position: relative;             /* Relative positioning for the underline */
+  margin: 0 5px;                  /* Add margin for spacing between links */
+}
+
+.topnav a:hover {
+  color: #bdc3c7;                 /* Lighter gray hover color */
+}
+
+.topnav a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: #bdc3c7;      /* Lighter gray underline */
+  position: absolute;
+  bottom: -4px;                   /* Position underline at the bottom */
+  left: 50%;
+  width: 0;                       /* Start with zero width */
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.topnav a:hover::after {
+  width: 100%;                    /* Expand to full width on hover */
+  left: 0;                        /* Adjust left to cover the entire element */
+}
+
+.topnav .icon {
+  display: none;                  /* Initially hidden */
+  color: #5c6770;                /* Light gray icon color */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .icon:hover {
+  background-color: #0b0c0c;      /* Darker blue on hover */
+  color: #bdc3c7;                 /* Lighter gray icon color on hover */
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(31, 40, 51, 0.9); /* Darker blue overlay */
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 1000;
+}
+
+.overlay a {
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #bdc3c7;                 /* Lighter gray overlay link color */
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover {
+  background-color: #0b0c0c;      /* Darker blue on hover */
+  color: #bdc3c7;                 /* Lighter gray overlay link color on hover */
+}
+
+.overlay.open {
+  width: 250px;
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 36px;
+  color: #bdc3c7;                 /* Lighter gray close button color */
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav {
+    background: linear-gradient(135deg, #121212, #1f2833); /* Dark gradient background */
+    padding: 10px 20px;
+  }
+  .topnav .img {
+    width: 100%;                  /* Adjust the width of the logo to fit the screen */
+    padding: 10px 0;              /* Add padding to lower the logo */
+    text-align: center;           /* Center the logo */
+    margin-top: 10px;
+  }
+
+  .topnav a:not(.img, .icon) {
+    display: none;                /* Hide all links except for the logo */
+  }
+
+  .topnav .icon {
+    display: block;               /* Show the icon */
+    margin-top: -45px;            /* Adjust the position of the icon */
+    align-self: flex-end;         /* Align icon to the right */
+  }
+}
