@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Scroll Carousel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="overlay" id="overlayNav">
+            <a href="javascript:void(0);" class="closebtn" onclick="toggleOverlay()">
+                <i class="fa fa-times"></i>
+            </a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <span class="img"><img src="#" alt="logo">logo</span>
+            <div class="nav-links">
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="about.html">About</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="toggleOverlay()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+
+    <section class="content">
+        <div style="height: 500px;"></div>
+    </section>
+
+    <div id="carousel" class="carousel">
+        <div class="slide active">
+            <div class="slide-content">
+                <div class="text-content">
+                    <h2>Slide 1 Title</h2>
+                    <p>This is the description for slide 1.</p>
+                    <button class="slide-button">Learn More</button>
+                </div>
+                <div class="img-container">
+                    <img src="pexels-sabel-blanco-662810-1480520.jpg" alt="Image 1">
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <div class="text-content">
+                    <h2>Slide 2 Title</h2>
+                    <p>This is the description for slide 2.</p>
+                    <button class="slide-button">Learn More</button>
+                </div>
+                <div class="img-container">
+                    <img src="pexels-victorfreitas-703016.jpg" alt="Image 2">
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide-content">
+                <div class="text-content">
+                    <h2>Slide 3 Title</h2>
+                    <p>This is the description for slide 3.</p>
+                    <button class="slide-button">Learn More</button>
+                </div>
+                <div class="img-container">
+                    <img src="pexels-sabel-blanco-662810-1638324.jpg" alt="Image 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-carousel" class="mobile-carousel">
+        <div class="mobile-slide">
+            <div class="slide-content">
+                <div class="text-content">
+                    <h2>Slide 1 Title</h2>
+                    <p>This is the description for slide 1.</p>
+                    <button class="slide-button">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-slide">
+            <div class="slide-content">
+                <div class="text-content">
+                    <h2>Slide 2 Title</h2>
+                    <p>This is the description for slide 2.</p>
+                    <button class="slide-button">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-slide">
+            <div class="slide-content">
+                <div class="text-content">
+                    <h2>Slide 3 Title</h2>
+                    <p>This is the description for slide 3.</p>
+                    <button class="slide-button">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="content">
+        <div style="height: 500px;"></div>
+    </section>
+
+    <footer>
+        <div class="footer-nav">
+            <span class="img"><img src="#" alt="logo">logo</span>
+            <div class="links">
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="toggleOverlay()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div class="social-media">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+        </div>
+    </footer>
+
+    <div class="overlay" id="overlayNav">
+        <a href="javascript:void(0);" class="closebtn" onclick="toggleOverlay()">
+            <i class="fa fa-times"></i>
+        </a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+    <script>
+        function toggleOverlay() {
+          let overlay = document.getElementById("overlayNav");
+          overlay.classList.toggle("open");
+        }
+
+        function toggleOverlay() {
+            const overlayNav = document.getElementById("overlayNav");
+            if (overlayNav.style.width === "250px") {
+                overlayNav.style.width = "0";
+            } else {
+                overlayNav.style.width = "250px";
+            }
+        }
+    </script>
+    <script src="nav.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Carousel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="carousel">
+        <div class="slide active" style="background-color: #FF5733;"></div>
+        <div class="slide" style="background-color: #3498DB;"></div>
+        <div class="slide" style="background-color: #27AE60;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> -->
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>Navbar</nav>
+    <div class="content">Content before scroll-trigger section</div>
+    <div class="scroll-trigger">
+        <div class="slide" style="background-color: lightcoral;">Slide 1 Content</div>
+        <div class="slide" style="background-color: lightblue;">Slide 2 Content</div>
+        <div class="slide" style="background-color: lightgreen;">Slide 3 Content</div>
+    </div>
+    <div class="mobile-slides">
+        <div class="mobile-slide" style="background-color: lightcoral;">Slide 1 Content</div>
+        <div class="mobile-slide" style="background-color: lightblue;">Slide 2 Content</div>
+        <div class="mobile-slide" style="background-color: lightgreen;">Slide 3 Content</div>
+    </div>
+    <div class="content">Content after scroll-trigger section</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> --> 
